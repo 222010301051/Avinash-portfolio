@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6f05f23697.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+    <style>
+        /* Internal CSS */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: #007BFF;
+            /* Blue color for the header */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .project {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #555;
+        }
+
+        .project p {
+            margin-bottom: 0;
+            color: #888;
+        }
+
+        footer {
+            background-color: #007BFF;
+            /* Blue color for the footer */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Additional CSS styles */
+        .header-content {
+            margin-bottom: 2rem;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            color: #555;
+        }
+
+        .project-link {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #000000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        nav img {
+            height: 60px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        #skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .skill {
+            margin: 1rem;
+            text-align: center;
+        }
+
+        #skills h1 {
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #skills .skill img {
+            width: 120px;
+            transition: .5s;
+        }
+
+        .skill img:hover {
+            transform: scale(1.1);
+        }
+
+        .br {
+            border-color: #cbd2d9;
+            border-radius: 10px;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .mp {
+            margin: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 15px;
+        }
+
+        .skills-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        #cont {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 1000px; 
+          margin: 50px auto; 
+          padding: 20px;
+          background-color: rgb(255, 255, 255);
+        }
+
+        #cont h1 {
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .symb {
+            font-size: 50px;
+            margin: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                text-align: center;
+            }
+
+            .skills-list {
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav img {
+                height: 60px;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+
+            .skills-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skill {
+                width: 100%;
+            }
+
+            .br {
+                margin: 10px 0;
+            }
+
+            #cont {
+                height: auto;
+            }
+
+            .symb {
+                font-size: 30px;
+                margin: 10px;
+            }
+        }
+
+        .download-link {
+          text-decoration: none;
+        }
+
+        .download-button {
+          background-color: #007BFF;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+          background-color: #0056b3;
+        }
+        .mainimg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="https://i.imgur.com/j20QB7w.png" alt="Avinash Mattupalli Portfolio">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#cont">Get In Touch</a>
+        <!-- Add more navigation links for other sections -->
+    </nav>
+    <main>
+      <img src="https://questionpapershub.com/wp-content/uploads/2021/02/web-development-image.jpg" class="mainimg">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi, I'm Avinash Mattupalli, a passionate full-stack web developer with experience in building web applications
+                using a variety of modern technologies and frameworks. My journey into development began with a passion
+                for problem-solving and creating seamless user experiences.
+            </p>
+            <a href="https://drive.google.com/file/d/12yaZ9I5f0jeuW0WbySZ_9zrMwZ2r18x2/view?usp=drive_link" download class="download-link">
+              <button class="download-button">Download Resume</button>
+            </a>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-row">
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>HTML 5</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>CSS 3</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>Java Script</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>Python</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://www.javatpoint.com/django/images/django-tutorial.png" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>Django</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>MySql</p>
+                    </div>
+                </div>
+                <div class="skill">
+                  <div class="br mp">
+                      <img src="https://blog.amt.in/wp-content/uploads/2017/12/e16da876-c2fd-4eb8-ae72-4b193c534938-Edited.png">
+                      <p>Express</p>
+                  </div>
+              </div>
+              <div class="skill">
+                  <div class="br mp">
+                      <img src="https://litslink.com/wp-content/uploads/2020/12/node.js-logo-image.png" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                      <p>NodeJs</p>
+                  </div>
+              </div>
+              <div class="skill">
+                <div class="br mp">
+                    <img src="https://www.datocms-assets.com/45470/1631110818-logo-react-js.png" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                    <p>React</p>
+                </div>
+            </div>
+                <div class="skill">
+                    <div class="br mp">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" class="p-1 h-20 md:h-24 drop-shadow-2xl">
+                        <p>Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Food Munch</h3>
+                <p>Technologies used : HTML, CSS, Bootstrap
+                    Discover the world of food with this responsive website that showcases a
+                    comprehensive list of food items.
+                    ● Designed with a user-centric approach, this website features HTML
+                    structure elements and Bootstrap components to ensure a seamless
+                    experience.
+                    ● Get a closer look at the food items with product videos, available at the
+                    click of a button.</p>
+                <a class="project-link" href="https://avinashfoodmun.ccbp.tech/">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Typing Speed Test</h3>
+                <p>Technologies used : HTML, CSS, JS, REST API Calls, Bootstrap
+                    An application to evaluate and improve your typing speed.
+                    ● Utilizes JavaScript and REST APIs to fetch and display the paragraph, and
+                    dynamically update the timer.
+                    ● Provides a user-friendly interface to display the typing speed and
+                    accuracy</p>
+                <a class="project-link" href="https://typingtestavi.ccbp.tech/">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Notes making app</h3>
+                <p>Technologies used : HTML, CSS, JavaScript, Bootstrap, React.js
+                    Developed a notes-making application using react
+                    Can perform CURD operations (Create,Update,Read,Delete)
+                    Users can make notes which will be stored in the local storage and will be
+                    displayed even after reloading</p>
+                <a class="project-link" href="https://legendary-toffee-6d950d.netlify.app/">View Project</a>
+            </div>
+            <div class="project">
+                <h3>College Management System</h3>
+                <p>
+                    Technologies used : HTML, CSS, JavaScript, Bootstrap, Django, Python, SQlite3
+                    The College Management System is a web application based on Django Framework that incorporates three different login types: admin login, student login, and HR login. The admin login allows administrators to access and manage student and employee details. Additionally, admins possess the authority to create new admin user accounts. Students can log in using their username and password in the student login section. If a student is new to the application, they can sign up and subsequently log in. Once logged in, students can view their timetable, academic calendar, and events calendar. They also have the option to provide feedback on their teachers, which is stored in the backend database. Furthermore, students can upload files such as assignments within the web application. HR department members can log in using their specific credentials in the HR login section. Upon logging in, they are directed to the home page, where they can choose the type of view for average teacher ratings. The application offers both tabular form and pie chart views. In the tabular form view, clicking on a teacher name reveals all the students and their respective ratings for that teacher. In the pie chart view, a comparison of the average ratings of teachers can be observed.</p>
+                <a class="project-link" href="https://github.com/222010301051/college-management-system">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Time Sheet Application</h3>
+                <p>
+                    Technologies used : HTML, CSS, JavaScript, Bootstrap, Django, Python, SQlite3
+                    The Time Sheet Application is a user-friendly platform that allows employees to log their work hours effortlessly. Upon logging in, employees can access a time sheet with fields like their name, date, shift type (general, work from home, night shift), project type, and login time. This application streamlines the process of recording work hours, making it efficient and accurate. Additionally, employees have the option to review their time sheet history, providing transparency and easy access to past records. With its simple interface and convenient features, the Time Sheet Application enhances productivity and tracking for both employees and management.</p>
+                <a class="project-link" href="https://github.com/222010301051/Time-Sheet-Application/tree/main">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Application Tracking System</h3>
+                <p>
+                    Technologies used : HTML, CSS, JavaScript, Bootstrap, Django, Python, SQlite3
+                    This “ATS” application built with Django aims to simplify and streamline the recruitment and hiring processes for organizations. By providing features such as user authentication, candidate data management, Excel file processing, and branch-specific categorization, The ATS enables recruiters and hiring managers to effectively track and evaluate applicants, ultimately facilitating efficient and informed hiring decisions.
+                    The Application Tracking System (ATS) is designed to streamline and automate the recruitment and hiring processes within an organization. It provides a centralized platform for managing job applications, tracking candidate information, and facilitating the entire hiring workflow.
+
+                </p>
+                <a class="project-link" href="https://github.com/222010301051/Application-Tracking-System">View Project</a>
+            </div>
+
+
+        </section>
+
+        
+        
+
+        <section id="cont">
+          <h1>CONTACT</h1>
+          <div>
+              <a href="https://www.linkedin.com/in/avinash-mattupalli/"><i class="fa-brands fa-linkedin-in symb"></i></a>
+              <a href="https://github.com/222010301051"><i class="fa-brands fa-github symb"></i></a>
+              <a href="https://instagram.com"><i class="fa-brands fa-instagram symb"></i></a>
+              <p>Avinash Mattupalli</p>
+              <p>+91 9133444319</p>
+              <p>msvavinash@gmail.com</p>
+          </div>
+      </section>
+
+
+    </main>
+
+    <footer>
+        
+        <p>&copy; 2023 Avinash Mattupalli. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
